@@ -1,10 +1,12 @@
 <?php
 
 
+
 // 1 #####################################
 $nombre1 = 2;
 $nombre2 = 3;
 echo " l’addition du nombre 1 et du nombre 2 est égale à ".($nombre1 + $nombre2);
+
 
 
 // 2 #####################################
@@ -18,6 +20,7 @@ $myFloat = 2.123;
 $myBool = true;
 
 
+
 // 3 #####################################
 $isActive = false;
 $genre = "Troll";
@@ -28,6 +31,7 @@ if($isActive){
 else{
     echo " le compte du personnage $genre est inactif.";
 }
+
 
 
 // 4 #####################################
@@ -46,6 +50,7 @@ $evenOrOdd = ($monNombre /2 !=1) ? "impair" : "pair";
 echo $evenOrOdd;
 
 
+
 // 5 #####################################
 if( !is_float($monNombre / 3) || !is_float($monNombre / 5) ){
     echo " mon nombre est un multiple de 3 et 5";
@@ -55,8 +60,10 @@ else{
 }
 
 
+
 // 6 #####################################
 echo ".la valeur absolue de $monNombre est ".abs($monNombre);
+
 
 
 // 7 #####################################
@@ -67,6 +74,7 @@ for($day = 0; $day < count($myDays); $day++){
 }
 
 
+
 // 8 #####################################
 function countBetween($countStart,$countStop){
 
@@ -75,6 +83,7 @@ function countBetween($countStart,$countStop){
     }
 }
 countBetween(2,5);
+
 
 
 // 9 #####################################
@@ -94,10 +103,8 @@ IsTheSumOfTheFirstTwoHigherThanTheMultiplicationOfTheLasts(1,2,3,4);
 
 
 
+// 10  #####################################
 $myArrayOfNumbers = [1, 2, 3, 4, 5, 6];
-
-
-
 function separateThemAll($theTargetLocation){
     $myOddArray = [];
     $myEvenArray = [];
@@ -121,6 +128,7 @@ function separateThemAll($theTargetLocation){
 separateThemAll($myArrayOfNumbers);
 
 
+
 // 11 #####################################
 function areTheseDivisibleBy3($myOtherTargets){
     $divisibleBy3 = [];
@@ -136,6 +144,7 @@ function areTheseDivisibleBy3($myOtherTargets){
 areTheseDivisibleBy3($myArrayOfNumbers);
 
 
+
 // 12 #####################################
 function sumMyArray($myArray){
     return array_sum($myArray);
@@ -144,6 +153,12 @@ function sumMyArray($myArray){
 echo "somme de l'array =>".sumMyArray($myArrayOfNumbers);
 
 
-$n1 = 2;
-$n2 = 3;
-echo $n1 * $n2;
+
+// 13 #####################################
+function myMoyenne($myArray){
+    return array_sum($myArray) / sizeof($myArray);
+}
+echo "moyenne de l'array =>".myMoyenne($myArrayOfNumbers);
+
+
+// finito
