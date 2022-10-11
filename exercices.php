@@ -52,7 +52,7 @@ echo $evenOrOdd;
 
 
 // 5 #####################################
-if( !is_float($monNombre / 3) || !is_float($monNombre / 5) ){
+if( !is_float($monNombre / 3) AND !is_float($monNombre / 5) ){
     echo " mon nombre est un multiple de 3 et 5";
 }
 else{
