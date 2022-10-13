@@ -53,7 +53,49 @@
 
     <input id="submitMail" type="submit">
 </form>
+<hr>
 
+
+
+
+
+<h3>Exo 4</h3>
+
+<form method="GET" action="index.php">
+        <input placeholder="Prix hors taxe en €" type="text" name="ht" value="<?php echo $_GET ["ht"]?>">
+        <input placeholder="% TVA" type="text" name="tva" value="<?php echo $_GET ["tva"]?>">
+        <input type="submit">
+</form>
+
+<p>
+    <?php
+        $prixHorsTaxe = $_GET ["ht"];
+        $tva = $_GET ["tva"];
+
+        if( empty($prixHorsTaxe) || empty($tva)){
+            echo "Indiquez le prix et le montant de la tva.";
+            $tva = "";
+            $prixHorsTaxe ="";
+        }
+        else{
+            echo "TVA : ".$tva."%. Le prix TTC est ".($prixHorsTaxe + ( $prixHorsTaxe * $tva / 100));
+        }
+
+     ?>
+</p>
+<hr>
+
+
+<h3>Exo 5</h3>
+<form enctype="multipart/form-data" action="./submit-exo5.php" method="POST">
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        <input id="fileField" type="file" name="file">
+        <input id="sendFile" type="submit">
+</form>
+
+<hr>
+
+<h3>Exo 6</h3>
 
 
 

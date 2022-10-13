@@ -55,3 +55,16 @@ submitMail.addEventListener("click", ()=>{
         null
     }
 })
+
+//Exo 5 ========================================================
+let sendFile = document.querySelector("#sendFile")
+let fileField = document.querySelector("#fileField")
+
+sendFile.addEventListener("click", ()=>{
+
+    if( !fileField.value.includes(".zip", 0)){
+        event.preventDefault();
+    }
+    else{
+    }
+})
