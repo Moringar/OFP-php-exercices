@@ -56,6 +56,26 @@ submitMail.addEventListener("click", ()=>{
     }
 })
 
+
+//Exo4 ================================================
+ const PHT = document.querySelector("#PHT")
+ const TVA = document.querySelector("#TVA")
+ const submitPrice = document.querySelector("#submitPrice")
+
+ submitPrice.addEventListener("click", ()=>{
+    console.log("pouet")
+    if(!Number(PHT.value) || !Number(TVA.value)){
+        event.preventDefault();
+    }
+    else{
+        null
+    }
+ })
+
+
+
+
+
 //Exo 5 ========================================================
 let sendFile = document.querySelector("#sendFile")
 let fileField = document.querySelector("#fileField")

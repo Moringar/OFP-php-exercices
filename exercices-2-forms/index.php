@@ -60,28 +60,29 @@
 
 
 <h3>Exo 4</h3>
+<?php
+        if( isset($_GET ["ht"]) && isset($_GET ["tva"])  ){
+            $prixHorsTaxe = $_GET ["ht"];
+            $tva = $_GET ["tva"];
+             echo "TVA : ".$tva."%. Le prix TTC est ".($prixHorsTaxe + ( $prixHorsTaxe * $tva / 100));
+
+        }
+        else{
+            $tva = "";
+            $prixHorsTaxe ="";
+            echo "Indiquez le prix et le montant de la tva.";
+        }
+
+?>
 
 <form method="GET" action="index.php">
-        <input placeholder="Prix hors taxe en €" type="text" name="ht" value="<?php echo $_GET ["ht"]?>">
-        <input placeholder="% TVA" type="text" name="tva" value="<?php echo $_GET ["tva"]?>">
-        <input type="submit">
+        <input id="PHT" placeholder="Prix hors taxe en €" type="text" name="ht" value="<?php echo $prixHorsTaxe?>">
+        <input id="TVA" placeholder="% TVA" type="text" name="tva" value="<?php echo $tva?>">
+        <input id="submitPrice" type="submit">
 </form>
 
 <p>
-    <?php
-        $prixHorsTaxe = $_GET ["ht"];
-        $tva = $_GET ["tva"];
 
-        if( empty($prixHorsTaxe) || empty($tva)){
-            echo "Indiquez le prix et le montant de la tva.";
-            $tva = "";
-            $prixHorsTaxe ="";
-        }
-        else{
-            echo "TVA : ".$tva."%. Le prix TTC est ".($prixHorsTaxe + ( $prixHorsTaxe * $tva / 100));
-        }
-
-     ?>
 </p>
 <hr>
 
@@ -96,6 +97,12 @@
 <hr>
 
 <h3>Exo 6</h3>
+<form action="">
+    <input type="submit" value="ACHAT" formaction="./pageachat.php">
+    <input type="submit" value="VENTE" formaction="./pagevente.php">
+    <input type="submit" value="LOCATION" formaction="./pagelocation.php">
+</form>
+
 
 
 
